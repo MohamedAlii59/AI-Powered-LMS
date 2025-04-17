@@ -17,3 +17,8 @@ const getById: RequestHandler = async (req: Request, res: Response) => {
     }
     return res.status(400).json({ message: "Student Not Found!" });
 }
+
+export const instructorController = {
+    getAll,
+    getById,
+};

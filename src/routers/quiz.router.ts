@@ -1,6 +1,8 @@
 import { Router } from "express";
+import { quizController } from "../controllers/quiz.controller";
+
 export const quizRouter = Router();
 
-quizRouter.route("/").get();
+quizRouter.route("/").get(quizController.getAll);
 
-quizRouter.route("/id").get();
+quizRouter.route("/id").get(quizController.getById);
